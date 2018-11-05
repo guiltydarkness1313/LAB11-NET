@@ -1,0 +1,32 @@
+﻿@model List<Model.Employee>
+@{
+    ViewBag.Title = "Employees";
+}
+<html>
+<head>
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Employees List</h2>
+    <table class="table">
+        <tr>
+            <td>Codigo</td>
+            <td>Apellido</td>
+            <td>Nombre</td>
+            <td>Cargo</td>
+            <td>Ciudad</td>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.id</td>
+                <td>@x.apellidos</td>
+                <td>@x.nombre</td>
+                <td>@x.cargo</td>
+                <td>@x.ciudad</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
